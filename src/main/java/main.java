@@ -43,7 +43,40 @@ public class main {
         System.out.println("Modify product SubGroup(char): ");
         String getmodifySubGroup = scan.nextLine();
         a.ModifyProducts(getmodifyID,getmodifyName,getmodifyGroup,getmodifySubGroup);
-        Guests b= new Guests("Anindo");
+        System.out.println("Get username");
+        String username = scan.nextLine();
+        System.out.println("Get Password");
+        String password = scan.nextLine();
+        Guests b = new Guests(username,password);
         b.ViewProducts();
+        System.out.println("Do you want to get registered? (Y/N): ");
+        String decision = scan.nextLine();
+        if(decision.equals("Y")){
+            b.GetRegistered();
+        }else if(decision.equals("N")){
+            System.out.println("Not registered");
+        }
+        System.out.println("Get customer ID: ");
+        int customer_ID = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Get customert Name: ");
+        String customer_Name = scan.nextLine();
+        scan.nextLine();
+        System.out.println("Get customer Address: ");
+        String customer_Address = scan.nextLine();
+        scan.nextLine();
+        System.out.println("Get customer Phone No: ");
+        int customer_Phone = scan.nextInt();
+        scan.nextLine();
+        Customer c= new Customer(customer_ID,customer_Name,customer_Address,customer_Phone);
+        System.out.println("Enter cart ID: ");
+        int cartID = scan.nextInt();
+        scan.nextLine();
+        Cart m = new Cart(cartID);
+        System.out.println("Enter number of products added to cart: ");
+        int numofproducts = scan.nextInt();
+        scan.nextLine();
+        m.setNumberOfProducts(numofproducts);
+        
     }
 }

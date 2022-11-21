@@ -25,6 +25,7 @@ public class Admin {
         products.add(p);
     }
     public void ViewProducts(){
+        System.out.println("Products List: ");
         for(Products p :products){
             System.out.println("ID: "+p.getId()+"Name: "+p.getName()+"Group: "+p.getGroup()+"Subgroup: "+p.getSubgroup());
         }
